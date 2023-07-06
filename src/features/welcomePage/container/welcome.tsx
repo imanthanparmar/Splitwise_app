@@ -1,15 +1,18 @@
 import React, { useCallback } from 'react';
-import '../style/welcome.scss';
-import MoneySplit from 'assets/images/splitmoney.png';
 import { useSelector } from 'react-redux';
+
 import { IState } from 'shared/interface/state';
+import MoneySplit from 'assets/images/splitmoney.png';
+
+import '../style/welcome.scss';
+import { useNavigate } from 'react-router-dom';
 
 const Welcome: React.FC = () => {
 	const { splitData } = useSelector((state: IState) => state);
-	console.log('splitData :>> ', splitData);
-
+	const navigate = useNavigate();
 	const handleOnClick = useCallback(() => {
 		localStorage.setItem('groupData', JSON.stringify(splitData.groupData));
+		navigate('/dashboard');
 	}, [splitData.groupData]);
 
 	return (

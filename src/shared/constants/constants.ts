@@ -17,47 +17,49 @@ enum HASHTAG {
 	'meta_description' = 'Meta Description'
 }
 
+const USER_LIST: IUserInterface[] = [
+	{
+		id: 1,
+		name: 'Manthan',
+		paidAmount: 0,
+		ownedAmount: 0,
+		borrowedAmount: 0
+	},
+	{
+		id: 2,
+		name: 'Vikas',
+		paidAmount: 0,
+		ownedAmount: 0,
+		borrowedAmount: 0
+	},
+	{
+		id: 3,
+		name: 'Milan',
+		paidAmount: 0,
+		ownedAmount: 0,
+		borrowedAmount: 0
+	},
+	{
+		id: 4,
+		name: 'Rahul',
+		paidAmount: 0,
+		ownedAmount: 0,
+		borrowedAmount: 0
+	},
+	{
+		id: 5,
+		name: 'Mihir',
+		paidAmount: 0,
+		ownedAmount: 0,
+		borrowedAmount: 0
+	}
+];
+
 const GROUP_DATA: IGroupDataInterface[] = [
 	{
 		id: 1,
 		name: 'Goa trip',
-		users: [
-			{
-				id: 1,
-				name: 'Manthan',
-				paidAmount: 0,
-				ownedAmount: 0,
-				borrowedAmount: 0
-			},
-			{
-				id: 2,
-				name: 'Vikas',
-				paidAmount: 0,
-				ownedAmount: 0,
-				borrowedAmount: 0
-			},
-			{
-				id: 3,
-				name: 'Milan',
-				paidAmount: 0,
-				ownedAmount: 0,
-				borrowedAmount: 0
-			},
-			{
-				id: 4,
-				name: 'Rahul',
-				paidAmount: 0,
-				ownedAmount: 0,
-				borrowedAmount: 0
-			},
-			{
-				id: 5,
-				name: 'Mihir',
-				paidAmount: 0,
-				ownedAmount: 0,
-				borrowedAmount: 0
-			}
-		]
+		users: USER_LIST
 	}
 ];
 
