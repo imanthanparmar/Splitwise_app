@@ -1,3 +1,5 @@
+import { IGroupDataInterface, IUserInterface } from 'shared/interface/state';
+
 const FIRST_LEVEL_BREADCRUMBS = [{ name: 'home', link: '/' }];
 
 const NUMBER_REGEX = /[0-9]*\.?[0-9]*$/;
@@ -15,11 +17,65 @@ enum HASHTAG {
 	'meta_description' = 'Meta Description'
 }
 
+const GROUP_DATA: IGroupDataInterface[] = [
+	{
+		id: 1,
+		name: 'Goa trip',
+		users: [
+			{
+				id: 1,
+				name: 'Manthan',
+				paidAmount: 0,
+				ownedAmount: 0,
+				borrowedAmount: 0
+			},
+			{
+				id: 2,
+				name: 'Vikas',
+				paidAmount: 0,
+				ownedAmount: 0,
+				borrowedAmount: 0
+			},
+			{
+				id: 3,
+				name: 'Milan',
+				paidAmount: 0,
+				ownedAmount: 0,
+				borrowedAmount: 0
+			},
+			{
+				id: 4,
+				name: 'Rahul',
+				paidAmount: 0,
+				ownedAmount: 0,
+				borrowedAmount: 0
+			},
+			{
+				id: 5,
+				name: 'Mihir',
+				paidAmount: 0,
+				ownedAmount: 0,
+				borrowedAmount: 0
+			}
+		]
+	}
+];
+
+const USER_PROFILE_DETAILS: IUserInterface = {
+	id: 1,
+	name: 'Manthan',
+	paidAmount: 0,
+	ownedAmount: 0,
+	borrowedAmount: 0
+};
+
 export {
 	FIRST_LEVEL_BREADCRUMBS,
 	NUMBER_REGEX,
 	PASSWORD_VALIDATOR_REGEX,
 	EMAIL_VALIDATOR_REGEX,
 	DATE_AND_TIME_REGEX,
-	HASHTAG
+	HASHTAG,
+	USER_PROFILE_DETAILS,
+	GROUP_DATA
 };
