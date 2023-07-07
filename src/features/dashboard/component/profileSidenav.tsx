@@ -8,7 +8,6 @@ import FriendList from './friendList';
 
 const ProfileSideNav: React.FC = () => {
 	const { userData } = useSelector((state: IState) => state.splitData);
-	console.log('userData :>> ', userData);
 	return (
 		<div className='p--20 flex justify-content--between user-sidenav'>
 			<div className='pb--20'>
