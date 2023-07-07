@@ -1,7 +1,4 @@
 .dashboard-container {
-	max-width: 700px;
-	margin: 0 auto;
-	background-color: #2c3940;
 	.dashboard-content {
 		height: 100%;
 		.user-sidenav {
@@ -35,7 +32,31 @@
 	}
 }
 
+.add-group--btn {
+	padding: 10px 20px;
+	background-color: #a5d6a7;
+	border: none;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: 500;
+	border-radius: 8px;
+	min-width: 170px;
+}
+
 .plus-icon {
 	width: 16px;
 	height: 16px;
+}
+
+.group-list--container {
+	padding: 20px;
+	border-radius: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: 0.3s all ease-in-out;
+	margin-bottom: 10px;
+	&:hover {
+		background-color: #212a2e;
+	}
 }

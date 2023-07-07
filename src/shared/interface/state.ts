@@ -26,7 +26,16 @@ export interface ISpliData {
 export interface IGroupDataInterface {
 	id: number;
 	name: string;
+	totalGroupExpense: number;
 	users: IUserInterface[];
+	expenses: IExpenseInterface[];
+}
+
+export interface IExpenseInterface {
+	id: number;
+	title: string;
+	amount: number;
+	peopleInvolved: IUserInterface[];
 }
 
 export interface IUserInterface {

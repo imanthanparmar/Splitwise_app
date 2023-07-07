@@ -59,6 +59,7 @@ const GROUP_DATA: IGroupDataInterface[] = [
 	{
 		id: 1,
 		name: 'Goa trip',
+		totalGroupExpense: 0,
 		users: [
 			{
 				id: 1,
@@ -95,7 +96,8 @@ const GROUP_DATA: IGroupDataInterface[] = [
 				ownedAmount: 0,
 				borrowedAmount: 0
 			}
-		]
+		],
+		expenses: []
 	}
 ];
 
