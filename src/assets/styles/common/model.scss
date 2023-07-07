@@ -7,6 +7,16 @@
 	background-color: rgba(24, 25, 26, 0.98);
 	z-index: 999;
 
+	.modal-content {
+		max-width: 600px;
+		background-color: #ffffff;
+		color: #000000;
+		border-radius: 16px;
+		margin: 50px auto;
+		position: relative;
+		padding: 20px;
+	}
+
 	.modal__body {
 		.scroll-with--sticky-header {
 			overflow-y: auto;
@@ -22,5 +32,18 @@
 			box-sizing: content-box;
 			@include padding(0 20px);
 		}
+	}
+}
+
+.modal-close-btn {
+	width: 30px;
+	height: 30px;
+	background-color: transparent;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	svg {
+		height: 16px;
+		width: 16px;
 	}
 }

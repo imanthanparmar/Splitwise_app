@@ -1339,3 +1339,14 @@
 	color: getColor($red, 200);
 	@include marginTop(10px);
 }
+
+.submit-btn {
+	padding: 10px 20px;
+	border-radius: 8px;
+	background-color: #a5d6a7;
+	font-weight: 500;
+	transition: 0.3s all ease-in-out;
+	&:hover {
+		background-color: #388e3c;
+	}
+}

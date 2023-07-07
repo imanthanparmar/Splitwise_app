@@ -1,12 +1,13 @@
-import { GROUP_DATA, USER_PROFILE_DETAILS } from 'shared/constants/constants';
+import { GROUP_DATA, USER_LIST, USER_PROFILE_DETAILS } from 'shared/constants/constants';
 import { IAction, ISpliData } from 'shared/interface/state';
 
 import * as actionTypes from 'store/actionTypes';
 
 const splitDataReducer = (
 	state: ISpliData = {
-		groupData: GROUP_DATA,
-		userData: USER_PROFILE_DETAILS
+		groupData: JSON.parse(localStorage.getItem('groupData') as string) || GROUP_DATA,
+		userData: JSON.parse(localStorage.getItem('userDetails') as string) || USER_PROFILE_DETAILS,
+		userList: JSON.parse(localStorage.getItem('userList') as string) || USER_LIST
 	},
 	action: IAction
 ): ISpliData => {

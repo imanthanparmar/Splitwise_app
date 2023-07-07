@@ -12,6 +12,8 @@ const Welcome: React.FC = () => {
 	const navigate = useNavigate();
 	const handleOnClick = useCallback(() => {
 		localStorage.setItem('groupData', JSON.stringify(splitData.groupData));
+		localStorage.setItem('userDetails', JSON.stringify(splitData.userData));
+		localStorage.setItem('userList', JSON.stringify(splitData.userList));
 		navigate('/dashboard');
 	}, [splitData.groupData]);
 

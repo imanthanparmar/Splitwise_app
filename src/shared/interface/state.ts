@@ -20,6 +20,7 @@ export interface IAction {
 export interface ISpliData {
 	groupData: IGroupDataInterface[];
 	userData: IUserInterface;
+	userList: IUserInterface[];
 }
 
 export interface IGroupDataInterface {

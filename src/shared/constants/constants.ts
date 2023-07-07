@@ -59,7 +59,43 @@ const GROUP_DATA: IGroupDataInterface[] = [
 	{
 		id: 1,
 		name: 'Goa trip',
-		users: USER_LIST
+		users: [
+			{
+				id: 1,
+				name: 'Manthan',
+				paidAmount: 0,
+				ownedAmount: 0,
+				borrowedAmount: 0
+			},
+			{
+				id: 2,
+				name: 'Vikas',
+				paidAmount: 0,
+				ownedAmount: 0,
+				borrowedAmount: 0
+			},
+			{
+				id: 3,
+				name: 'Milan',
+				paidAmount: 0,
+				ownedAmount: 0,
+				borrowedAmount: 0
+			},
+			{
+				id: 4,
+				name: 'Rahul',
+				paidAmount: 0,
+				ownedAmount: 0,
+				borrowedAmount: 0
+			},
+			{
+				id: 5,
+				name: 'Mihir',
+				paidAmount: 0,
+				ownedAmount: 0,
+				borrowedAmount: 0
+			}
+		]
 	}
 ];
 
@@ -79,5 +115,6 @@ export {
 	DATE_AND_TIME_REGEX,
 	HASHTAG,
 	USER_PROFILE_DETAILS,
-	GROUP_DATA
+	GROUP_DATA,
+	USER_LIST
 };

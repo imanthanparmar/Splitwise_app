@@ -1,5 +1,6 @@
 import React, { PropsWithChildren } from 'react';
 import { Modal } from 'react-bootstrap';
+import { CrossIcon } from 'shared/components/icons/icons';
 import Button from 'shared/form/button';
 
 export interface IModalProps extends PropsWithChildren {
@@ -26,7 +27,7 @@ const CustomModal: React.FC<IModalProps> = (props) => {
 				</Modal.Header>
 			) : (
 				<Button className='modal-close-btn' onClick={props.handleClose}>
-					<span>×</span>
+					<CrossIcon />
 				</Button>
 			)}
 			<Modal.Body>{props.children}</Modal.Body>

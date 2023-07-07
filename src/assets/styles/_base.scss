@@ -12,7 +12,7 @@
 body {
 	@include margin(0);
 	@include padding(0);
-	background-color: #2c3940;
+	background-color: #ffffff;
 	font-size: $font-size-browser-default;
 	font-weight: $font-regular;
 	color: #ffffff;
@@ -74,6 +74,9 @@ input {
 	box-sizing: border-box;
 	outline: none;
 	border: none;
+	border-radius: 8px;
+	padding: 10px;
+	background-color: #f1efef;
 }
 
 button {

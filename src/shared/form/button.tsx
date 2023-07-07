@@ -25,6 +25,7 @@ const Button: React.FC<IButtonProps> = (props) => {
 			onClick={!props.disabled && !props.loading ? onClick : () => undefined}
 		>
 			{props.loading && <i className='bx bxs-spin bx-spinner' />}
+			{props.children}
 		</button>
 	);
 	return props.abbr ? (
