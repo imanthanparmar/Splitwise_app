@@ -36,6 +36,7 @@ export interface IExpenseInterface {
 	title: string;
 	amount: number;
 	peopleInvolved: IUserInterface[];
+	paidBy: IUserInterface;
 }
 
 export interface IUserInterface {

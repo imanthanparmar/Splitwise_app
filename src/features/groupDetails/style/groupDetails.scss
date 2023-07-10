@@ -1,0 +1,11 @@
+.group-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.expense-list--container {
+	padding: 20px;
+	height: calc(100vh - 205px);
+	overflow: auto;
+}

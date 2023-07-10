@@ -1,3 +1,4 @@
+import { CSSProperties } from 'react';
 import { IGroupDataInterface, IUserInterface } from 'shared/interface/state';
 
 const FIRST_LEVEL_BREADCRUMBS = [{ name: 'home', link: '/' }];
@@ -16,6 +17,70 @@ enum HASHTAG {
 	'meta_title' = 'Meta Title',
 	'meta_description' = 'Meta Description'
 }
+
+const reactSelectStyles = {
+	option: (base: CSSProperties, state: any) => ({
+		...base,
+		// borderBottom: '1px solid #e7e7e7',
+		color: state.isSelected ? 'white' : state.isFocused ? '' : '#272A30',
+		padding: 8,
+		backgroundColor: state.isSelected ? '#081d34' : state.isFocused ? '' : '',
+		':active': {
+			backgroundColor: '#081d34',
+			color: 'white'
+		},
+		':hover': {
+			backgroundColor: '#081d34',
+			color: 'white'
+		},
+		':focus': {
+			backgroundColor: '#081d34',
+			outline: 0,
+			color: 'white'
+		},
+		cursor: 'pointer'
+	}),
+	menu: (base: CSSProperties) => ({
+		...base,
+		zIndex: 3,
+		marginTop: 4,
+		border: '1px solid #D4D6D9',
+		borderRadius: 8
+	}),
+	menuList: (base: CSSProperties) => ({
+		...base,
+		padding: 0,
+		backgroundColor: '#ffffff !important'
+	}),
+	clearIndicator: (base: CSSProperties) => ({
+		...base,
+		cursor: 'pointer'
+	}),
+	dropdownIndicator: (base: CSSProperties, state: any) => ({
+		...base,
+		cursor: 'pointer',
+		transition: 'all 0.2s ease',
+		transform: state.selectProps.menuIsOpen ? 'rotate(180deg)' : 'none',
+		color: '#081D34'
+	}),
+	indicatorSeparator: () => ({
+		width: '0'
+	}),
+	control: () => ({
+		// none of react-selects styles are passed to <View />
+		display: 'flex',
+		width: '100%',
+		minHeight: '34px !important',
+		border: '1px solid #EDEEEF',
+		padding: '0px !important',
+		borderRadius: '8px'
+	}),
+	singleValue: (base: CSSProperties, state: any) => {
+		const opacity = state.isDisabled ? 0.5 : 1;
+		const transition = 'opacity 300ms';
+		return { ...base, opacity: opacity, transition: transition };
+	}
+};
 
 const USER_LIST: IUserInterface[] = [
 	{
@@ -118,5 +183,6 @@ export {
 	HASHTAG,
 	USER_PROFILE_DETAILS,
 	GROUP_DATA,
-	USER_LIST
+	USER_LIST,
+	reactSelectStyles
 };
