@@ -9,3 +9,20 @@
 	height: calc(100vh - 205px);
 	overflow: auto;
 }
+
+.expense-list {
+	padding: 20px;
+	border-radius: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: 0.3s all ease-in-out;
+	margin-bottom: 10px;
+	&:hover {
+		background-color: #212a2e;
+	}
+	h5 {
+		max-width: 200px;
+		word-wrap: break-word;
+	}
+}
