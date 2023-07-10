@@ -66,7 +66,8 @@ const AddExpenseForm: React.FC<IProps> = (props) => {
 				title: values.title,
 				amount: values.amount,
 				peopleInvolved: peopleInvolved,
-				paidBy: peopleInvolved.filter((item: any) => item.id === values.paidBy.id)[0]
+				paidBy: peopleInvolved.filter((item: any) => item.id === values.paidBy.id)[0],
+				isSettledUp: false
 			};
 			expenseList.push(expense as IExpenseInterface);
 			tempGroupDetails = {

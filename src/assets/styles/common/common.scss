@@ -1195,11 +1195,15 @@
 }
 
 .text--red {
-	@include getShadesColorClasses($red, 'color');
+	color: red;
 }
 
 .text--success {
 	@include getShadesColorClasses($success, 'color');
+}
+
+.text--green {
+	color: #388e3c;
 }
 
 .text--blue {

@@ -33,7 +33,7 @@ const FriendList: React.FC = () => {
 			</div>
 			<div className='width--full text--right'>
 				<button onClick={() => setAction('friendList')} className='user-list--btn'>
-					User list
+					Friend list
 				</button>
 			</div>
 

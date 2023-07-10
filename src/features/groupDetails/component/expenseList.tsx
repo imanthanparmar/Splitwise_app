@@ -1,6 +1,7 @@
 import { isEmpty } from 'lodash';
 import React, { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { DeleteIcon } from 'shared/components/icons/icons';
 import { IGroupDataInterface, IState } from 'shared/interface/state';
 import { createAction } from 'shared/util/utility';
@@ -14,6 +15,7 @@ const ExpenseList: React.FC<IProps> = (props) => {
 	const { groupDetails } = props;
 	const { groupData } = useSelector((state: IState) => state.splitData);
 	const dispatch = useDispatch();
+	const navigate = useNavigate();
 
 	const handleDeleteExpense = useCallback(
 		(id: number) => {
@@ -48,10 +50,14 @@ const ExpenseList: React.FC<IProps> = (props) => {
 			{!isEmpty(groupDetails.expenses) &&
 				groupDetails.expenses.map((item) => {
 					return (
-						<div className='expense-list cursor--pointer'>
+						<div
+							className='expense-list cursor--pointer'
+							onClick={() => navigate(`/expenseDetails/${groupDetails.id}/${item.id}`)}
+						>
 							<h5 className='font--regular'>{item.title}</h5>
 							<div className='flex'>
-								<p>Total amount: {item.amount} &#x20B9;</p>
+								{!item.isSettledUp && <p>Total amount: {item.amount} &#x20B9;</p>}
+								{item.isSettledUp && <p>Settled up.</p>}
 								<span className='ml--10' onClick={() => handleDeleteExpense(item.id)}>
 									<DeleteIcon />
 								</span>

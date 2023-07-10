@@ -37,6 +37,7 @@ export interface IExpenseInterface {
 	amount: number;
 	peopleInvolved: IUserInterface[];
 	paidBy: IUserInterface;
+	isSettledUp: boolean;
 }
 
 export interface IUserInterface {
