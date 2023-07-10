@@ -58,7 +58,14 @@ const ExpenseList: React.FC<IProps> = (props) => {
 							<div className='flex'>
 								{!item.isSettledUp && <p>Total amount: {item.amount} &#x20B9;</p>}
 								{item.isSettledUp && <p>Settled up.</p>}
-								<span className='ml--10' onClick={() => handleDeleteExpense(item.id)}>
+								<span
+									className='ml--10'
+									onClick={(event) => {
+										event.stopPropagation();
+										event.preventDefault();
+										handleDeleteExpense(item.id);
+									}}
+								>
 									<DeleteIcon />
 								</span>
 							</div>
