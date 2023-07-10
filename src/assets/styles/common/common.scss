@@ -1356,10 +1356,11 @@
 }
 
 .container {
-	max-width: 700px;
-	margin: 0 auto;
+	max-width: 400px;
+	margin: auto;
+	border-radius: 16px;
 	background-color: #2c3940;
-	height: 100vh;
+	height: 70vh;
 }
 
 .btn--green {

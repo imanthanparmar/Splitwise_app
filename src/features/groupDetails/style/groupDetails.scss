@@ -6,12 +6,13 @@
 
 .expense-list--container {
 	padding: 20px;
-	height: calc(100vh - 205px);
+	height: calc(100% - 205px);
 	overflow: auto;
 }
 
 .expense-list {
 	padding: 20px;
+	border: 1px solid #ffffff;
 	border-radius: 16px;
 	display: flex;
 	align-items: center;

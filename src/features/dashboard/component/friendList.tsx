@@ -22,7 +22,7 @@ const FriendList: React.FC = () => {
 		setFriendList(tempUsers);
 	}, [userData.id, userList]);
 	return (
-		<div className='mt--40'>
+		<div className='mt--40 flex'>
 			<div className='width--full text--right'>
 				<button onClick={() => setAction('addFriend')} className='add-frind--btn'>
 					<span className='mr--10'>
@@ -31,7 +31,7 @@ const FriendList: React.FC = () => {
 					Add Friend
 				</button>
 			</div>
-			<div className='width--full mt--20 text--right'>
+			<div className='width--full text--right'>
 				<button onClick={() => setAction('friendList')} className='user-list--btn'>
 					User list
 				</button>

@@ -7,7 +7,7 @@ const GroupList: React.FC = () => {
 	const { groupData } = useSelector((state: IState) => state.splitData);
 	const navigate = useNavigate();
 	return (
-		<div className='p--20'>
+		<div className='pb--20 pt--20'>
 			{groupData.map((item) => {
 				return (
 					<div
@@ -15,7 +15,7 @@ const GroupList: React.FC = () => {
 						className='group-list--container cursor--pointer'
 					>
 						<h5 className='font--regular'>{item.name}</h5>
-						<p>Total expense: {item.totalGroupExpense}</p>
+						<p>Total expense: {item.totalGroupExpense} &#x20B9;</p>
 					</div>
 				);
 			})}

@@ -9,7 +9,7 @@ import FriendList from './friendList';
 const ProfileSideNav: React.FC = () => {
 	const { userData } = useSelector((state: IState) => state.splitData);
 	return (
-		<div className='p--20 flex justify-content--between user-sidenav'>
+		<div className='p--20 user-sidenav'>
 			<div className='pb--20'>
 				<div className='flex'>
 					<img src={MoneySplit} alt='' className='mr--20' />
